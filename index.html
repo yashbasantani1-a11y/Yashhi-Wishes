@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>My Dear Yashhi 💗</title>
+
+<style>
+*{box-sizing:border-box}
+
+html,body{
+  margin:0;
+  min-height:100%;
+}
+
+body{
+  font-family:Georgia,"Times New Roman",serif;
+  background:radial-gradient(circle at 50% 20%,#fff8fc,#ffeef6 45%,#f8dce9);
+  color:#6b2947;
+  overflow:hidden;
+}
+
+#hearts{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  overflow:hidden;
+}
+
+.heart{
+  position:absolute;
+  bottom:-30px;
+  animation:float 7s linear infinite;
+  opacity:.6;
+}
+
+@keyframes float{
+  0%{
+    transform:translateY(0) scale(.7);
+    opacity:0
+  }
+  15%{opacity:.7}
+  85%{opacity:.6}
+  100%{
+    transform:translateY(-110vh) scale(1.2) rotate(20deg);
+    opacity:0
+  }
+}
+
+.screen{
+  min-height:100vh;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  text-align:center;
+  position:relative;
+  z-index:2;
+}
+
+.screen.active{
+  display:flex;
+}
+
+.card{
+  width:min(430px,94vw);
+  padding:30px 24px;
+  background:rgba(255,255,255,.82);
+  border-radius:30px;
+  box-shadow:0 20px 60px rgba(120,35,72,.15);
+  backdrop-filter:blur(10px);
+}
+
+.small{
+  font-size:14px;
+  opacity:.7;
+}
+
+.tap{
+  font-size:14px;
+  opacity:.7;
+}
+
+h1{
+  font-size:32px;
+  margin:12px 0;
+}
+
+p{
+  font-size:18px;
+  line-height:1.65;
+  margin:12px 0 22px;
+}
+
+.animal{
+  font-size:105px;
+  line-height:1;
+  margin:8px 0 15px;
+}
+
+.flower{
+  font-size:85px;
+  margin:5px 0;
+}
+
+.bouquet{
+  font-size:75px;
+  margin:5px;
+}
+
+button{
+  border:0;
+  border-radius:999px;
+  padding:13px 25px;
+  font-size:16px;
+  font-family:inherit;
+  color:white;
+  background:linear-gradient(135deg,#e85b8d,#b83f6b);
+  box-shadow:0 8px 22px rgba(184,63,107,.25);
+  cursor:pointer;
+}
+
+.gift{
+  width:170px;
+  height:135px;
+  margin:20px auto 12px;
+  position:relative;
+  cursor:pointer;
+  animation:breathe 2s ease-in-out infinite;
+}
+
+@keyframes breathe{
+  50%{transform:translateY(-6px)}
+}
+
+.box{
+  position:absolute;
+  left:15px;
+  right:15px;
+  bottom:0;
+  height:90px;
+  background:#f58bb2;
+  border-radius:8px;
+}
+
+.lid{
+  position:absolute;
+  left:5px;
+  right:5px;
+  top:22px;
+  height:27px;
+  background:#ff9dc0;
+  border-radius:7px;
+  z-index:2;
+}
+
+.ribbon-v{
+  position:absolute;
+  width:24px;
+  top:22px;
+  bottom:0;
+  left:73px;
+  background:#fff0a8;
+  z-index:3;
+}
+
+.ribbon-bow{
+  position:absolute;
+  top:0;
+  left:60px;
+  width:50px;
+  height:35px;
+  z-index:4;
+}
+
+.ribbon-bow:before,
+.ribbon-bow:after{
+  content:"";
+  position:absolute;
+  width:34px;
+  height:25px;
+  background:#fff0a8;
+  border-radius:80% 15%;
+  top:4px;
+}
+
+.ribbon-bow:before{
+  left:-9px;
+  transform:rotate(25deg);
+}
+
+.ribbon-bow:after{
+  right:-9px;
+  transform:scaleX(-1) rotate(25deg);
+}
+
+.final h1{
+  color:#a92f5d;
+  font-size:36px;
+}
+
+.signature{
+  margin-top:25px;
+  font-size:16px;
+  opacity:.75;
+}
+</style>
+</head>
+
+<body>
+
+<div id="hearts"></div>
+
+
+<!-- PAGE 1 -->
+
+<section class="screen active" id="s1">
+
+<div class="card">
+
+<div class="small">
+A tiny surprise for you ♡
+</div>
+
+<div class="gift" onclick="next(2)">
+
+<div class="ribbon-bow"></div>
+<div class="lid"></div>
+<div class="ribbon-v"></div>
+<div class="box"></div>
+
+</div>
+
+<h1>
+My Dear Yashhi 💗
+</h1>
+
+<div class="tap">
+(tap the gift to open)
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PAGE 2 -->
+
+<section class="screen" id="s2">
+
+<div class="card">
+
+<div class="animal">
+🐶
+</div>
+
+<h1>
+Hiii, Yashhi 🥹
+</h1>
+
+<p>
+I wanted to give you something small…
+just to remind you that having someone
+as genuine and special as you in my life
+means a lot to me.
+</p>
+
+<button onclick="next(3)">
+Next →
+</button>
+
+</div>
+
+</section>
+
+
+<!-- PAGE 3 -->
+
+<section class="screen" id="s3">
+
+<div class="card">
+
+<div class="animal">
+🐱
+</div>
+
+<h1>
+For My Special Person 🐾
+</h1>
+
+<p>
+This little puppy and kitten came with
+one important message:
+
+Always stay the beautiful, kind and
+genuine person you are.
+
+And yes… you deserve all the cute things. 🌷
+</p>
+
+<button onclick="next(4)">
+Keep going ♡
+</button>
+
+</div>
+
+</section>
+
+
+<!-- PAGE 4 -->
+
+<section class="screen" id="s4">
+
+<div class="card">
+
+<div class="flower">
+🌷
+</div>
+
+<div class="bouquet">
+💐
+</div>
+
+<h1>
+For You, Yashhi 🌸
+</h1>
+
+<p>
+Some people become important without
+even trying.
+
+Your presence, your kindness and the
+little memories we share are genuinely
+precious to me.
+</p>
+
+<button onclick="next(5)">
+One last thing…
+</button>
+
+</div>
+
+</section>
+
+
+<!-- FINAL PAGE -->
+
+<section class="screen" id="s5">
+
+<div class="card">
+
+<div class="animal">
+🐶💗🐱
+</div>
+
+<h1>
+Stay The Same Beautiful Soul. ❤️
+</h1>
+
+<p>
+Whatever happens in life, I hope you
+always remember that you are appreciated,
+valued and cared for.
+
+Keep smiling, keep being yourself,
+and never lose the beautiful heart
+that makes you, you.
+</p>
+
+<div class="flower">
+🌸
+</div>
+
+<div class="signature">
+For My Dear Yashhi, with lots of care ♡
+</div>
+
+</div>
+
+</section>
+
+
+<script>
+
+function next(n){
+
+  document
+  .querySelectorAll(".screen")
+  .forEach(s => s.classList.remove("active"));
+
+  document
+  .getElementById("s"+n)
+  .classList.add("active");
+
+  burst();
+}
+
+
+function burst(){
+
+  for(let i=0;i<14;i++){
+
+    let e=document.createElement("div");
+
+    e.textContent=
+      ["💗","💕","🌸","✨","💖"]
+      [Math.floor(Math.random()*5)];
+
+    e.style.position="fixed";
+    e.style.left=(45+Math.random()*10)+"vw";
+    e.style.top=(45+Math.random()*10)+"vh";
+    e.style.fontSize=(15+Math.random()*18)+"px";
+    e.style.zIndex=10;
+    e.style.pointerEvents="none";
+
+    document.body.appendChild(e);
+
+    let x=(Math.random()-.5)*300;
+    let y=(Math.random()-.5)*300;
+
+    e.animate(
+      [
+        {
+          transform:"translate(0,0) scale(.5)",
+          opacity:1
+        },
+        {
+          transform:`translate(${x}px,${y}px) scale(1.3)`,
+          opacity:0
+        }
+      ],
+      {
+        duration:900,
+        easing:"ease-out"
+      }
+    ).onfinish=()=>e.remove();
+  }
+}
+
+
+/* Floating hearts */
+
+for(let i=0;i<18;i++){
+
+  let h=document.createElement("div");
+
+  h.className="heart";
+
+  h.textContent=
+    ["♡","♥","💗","💕"]
+    [Math.floor(Math.random()*4)];
+
+  h.style.left=
+    Math.random()*100+"vw";
+
+  h.style.animationDelay=
+    Math.random()*7+"s";
+
+  h.style.animationDuration=
+    (5+Math.random()*5)+"s";
+
+  h.style.fontSize=
+    (12+Math.random()*18)+"px";
+
+  document
+    .getElementById("hearts")
+    .appendChild(h);
+}
+
+</script>
+
+</body>
+</html>
