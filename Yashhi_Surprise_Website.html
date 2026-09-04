@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Little Surprise for Yashhi ❤️</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{min-height:100vh;background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);display:flex;justify-content:center;align-items:center;overflow:hidden;color:white}
+.container{width:100%;max-width:500px;text-align:center;padding:25px;z-index:1}
+#intro h1{font-size:2rem;margin-bottom:12px}
+#intro p{color:#d4d4d4;margin-bottom:40px;line-height:1.6}
+.gift-container{display:flex;justify-content:center;cursor:pointer;margin-top:20px}
+.gift{position:relative;width:180px;height:150px;background:#ff4d6d;border-radius:10px;box-shadow:0 15px 40px rgba(255,77,109,.4);transition:.5s}
+.gift:hover{transform:scale(1.05)}
+.ribbon-vertical{position:absolute;width:30px;height:100%;background:#fff;left:75px}
+.ribbon-horizontal{position:absolute;width:100%;height:30px;background:#fff;top:60px}
+.lid{position:absolute;width:200px;height:45px;background:#ff4d6d;top:-35px;left:-10px;border-radius:10px;transition:1s}
+.bow{position:absolute;top:-60px;left:45px;font-size:70px}
+#surprise,#final{display:none;animation:fadeIn 1s ease forwards}
+.card{background:rgba(255,255,255,.1);backdrop-filter:blur(15px);border:1px solid rgba(255,255,255,.2);border-radius:25px;padding:30px 22px;box-shadow:0 15px 50px rgba(0,0,0,.3)}
+.card h1{font-size:2rem;margin-bottom:20px}
+.heart{font-size:50px;animation:heartbeat 1.2s infinite;margin:15px 0}
+.message{line-height:1.8;font-size:16px;color:#f1f1f1;text-align:left}
+.highlight{color:#ff8fa3;font-weight:bold}
+.next-btn{margin-top:25px;padding:14px 25px;border:none;border-radius:30px;background:#ff4d6d;color:white;font-size:16px;cursor:pointer;transition:.3s}
+.next-btn:hover{transform:scale(1.05);background:#ff3355}
+.final-card{padding:30px}
+.final-card h1{font-size:2.2rem;margin-bottom:25px}
+.final-message{font-size:17px;line-height:1.9;color:#eee}
+.signature{margin-top:30px;font-size:18px;color:#ff8fa3}
+@keyframes heartbeat{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.heart-bg{position:absolute;color:rgba(255,255,255,.08);font-size:30px;animation:float 8s infinite linear}
+@keyframes float{from{transform:translateY(100vh)}to{transform:translateY(-100vh)}}
+</style>
+</head>
+<body>
+<div class="heart-bg" style="left:10%">❤</div>
+<div class="heart-bg" style="left:25%;animation-delay:2s">❤</div>
+<div class="heart-bg" style="left:70%;animation-delay:4s">❤</div>
+<div class="heart-bg" style="left:90%;animation-delay:1s">❤</div>
+
+<div class="container">
+<div id="intro">
+<h1>Hey Yashhi... 👀</h1>
+<p>I know your mood isn't really the best right now...<br>So instead of asking you a hundred questions,<br>I decided to give you something small. 🎁</p>
+<div class="gift-container" onclick="openGift()">
+<div class="gift">
+<div class="lid"><div class="bow">🎀</div></div>
+<div class="ribbon-vertical"></div>
+<div class="ribbon-horizontal"></div>
+</div>
+</div>
+<p style="margin-top:35px;color:#aaa">Tap the gift to open it ✨</p>
+</div>
+
+<div id="surprise">
+<div class="card">
+<h1>For Yashhi ❤️</h1>
+<div class="heart">❤️</div>
+<div class="message">
+I know sometimes your mood is just... <span class="highlight">not okay.</span>
+<br><br>
+And maybe there isn't always a particular reason behind it.
+<br><br>
+Sometimes you just don't feel like talking. Sometimes everything feels annoying. And sometimes you simply need your own space.
+<br><br>
+And that's completely okay, Yashhi. ❤️
+<br><br>
+I didn't make this because you asked me to fix your mood.
+<br><br>
+I made this simply because...
+<br><br>
+<span class="highlight">I wanted to give you at least one small reason to smile.</span>
+</div>
+<button class="next-btn" onclick="showFinal()">One More Thing 👀</button>
+</div>
+</div>
+
+<div id="final">
+<div class="card final-card">
+<h1>Just Remember This 🤍</h1>
+<div class="heart">💗</div>
+<div class="final-message">
+You don't always have to be happy around me.
+<br><br>
+You don't have to force yourself to talk when your mood isn't good.
+<br><br>
+You don't even have to explain everything.
+<br><br>
+Just be yourself.
+<br><br>
+Whether you're happy, annoyed, quiet, angry, or completely random...
+<br><br>
+<span class="highlight">You're still Yashhi. 😂❤️</span>
+<br><br>
+And this is just a small reminder that...
+<br><br>
+<span class="highlight">Someone out here genuinely wanted to see you smile today.</span>
+<br><br>
+So whenever you're feeling a little low...
+<br><br>
+Just remember that this small surprise was made especially for you. 🎁❤️
+</div>
+<div class="signature">— From someone who wanted to make Yashhi smile ✨</div>
+</div>
+</div>
+</div>
+
+<script>
+function openGift(){
+ document.getElementById("intro").style.display="none";
+ setTimeout(()=>document.getElementById("surprise").style.display="block",300);
+}
+function showFinal(){
+ document.getElementById("surprise").style.display="none";
+ setTimeout(()=>document.getElementById("final").style.display="block",300);
+}
+</script>
+</body>
+</html>
